@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CAEF39AE-ED0B-496B-8F3C-39B3E1A16BCC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PS4FileNinja</RootNamespace>
+    <AssemblyName>PS4FileNinja</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ps4fileninja.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColoredProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Commands.cs" />
+    <Compile Include="Dent.cs" />
+    <Compile Include="frmDebugOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDebugOutput.Designer.cs">
+      <DependentUpon>frmDebugOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDump.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDump.Designer.cs">
+      <DependentUpon>frmDump.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputString.Designer.cs">
+      <DependentUpon>frmInputString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKernelMemory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKernelMemory.Designer.cs">
+      <DependentUpon>frmKernelMemory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesses.Designer.cs">
+      <DependentUpon>frmProcesses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectFolder.Designer.cs">
+      <DependentUpon>frmSelectFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransferFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransferFolder.Designer.cs">
+      <DependentUpon>frmTransferFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransfer.Designer.cs">
+      <DependentUpon>frmTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrowser.Designer.cs">
+      <DependentUpon>frmBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnection.Designer.cs">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUploadFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUploadFiles.Designer.cs">
+      <DependentUpon>frmUploadFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVMEntries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVMEntries.designer.cs">
+      <DependentUpon>frmVMEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry.cs" />
+    <Compile Include="MountPoint.cs" />
+    <Compile Include="Network.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PS4CPU.cs" />
+    <Compile Include="Structures.cs" />
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="frmDebugOutput.resx">
+      <DependentUpon>frmDebugOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDump.resx">
+      <DependentUpon>frmDump.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputString.resx">
+      <DependentUpon>frmInputString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKernelMemory.resx">
+      <DependentUpon>frmKernelMemory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesses.resx">
+      <DependentUpon>frmProcesses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectFolder.resx">
+      <DependentUpon>frmSelectFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransferFolder.resx">
+      <DependentUpon>frmTransferFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransfer.resx">
+      <DependentUpon>frmTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBrowser.resx">
+      <DependentUpon>frmBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnection.resx">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUploadFiles.resx">
+      <DependentUpon>frmUploadFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVMEntries.resx">
+      <DependentUpon>frmVMEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="payload_176.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ps4browser.ico" />
+    <Content Include="ps4fileninja.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.csproj">
+      <Project>{26c5f25f-b450-4caf-ad8b-b8d11ae73457}</Project>
+      <Name>Be.Windows.Forms.HexBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpDisasm\SharpDisasm.csproj">
+      <Project>{d828384e-0251-44c4-8bf2-3608fd3dd2cd}</Project>
+      <Name>SharpDisasm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
